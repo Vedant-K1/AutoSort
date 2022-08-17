@@ -9,4 +9,6 @@
 
 
 def sort_fldr_img(folder_name,trip,default='Unsorted'):
+    a=15
+    print(a)
 
