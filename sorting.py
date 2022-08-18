@@ -11,19 +11,20 @@ import os
 from pathlib import Path
 
 
-def sort_fldr_img(folder_name,trip):
+def sort_img(folder_name,trip):
     files = os.listdir(folder_name) #Getting the files
     print(files)
     print(len(files))
 
     for i in range(len(files)):
-        files[i] = folder_name+files[i] #adding absolute path
+        files[i] = folder_name+'\\\\'+files[i] #adding absolute path
         # print(i)
     # files.sort(key=lambda x: os.path.getmtime(x))
-    paths = sorted(Path(folder_name).iterdir(), key=os.path.getctime) #sorting the files
-
+    paths = sorted(Path(folder_name).iterdir(), key=os.path.getmtime) #sorting the files
+    files.sort(key=os.path.getctime)
     print(paths)
+    return(paths)
 
 
 
-sort_fldr_img('C:\Vedant_\Projects\Sorting_System\Images','Test',)
+sorted_path=sort_img('C:\Vedant_\Projects\Sorting_System\Images','Test',)
