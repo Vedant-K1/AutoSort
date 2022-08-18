@@ -8,12 +8,22 @@
 #TODO Combine with android app??
 import glob
 import os
+from pathlib import Path
 
 
-def sort_fldr_img(folder_name,trip,default='Unsorted'):
-    files = list(filter(os.path.isfile, glob.glob(folder_name + "*")))
-    files.sort(key=lambda x: os.path.getmtime(x))
+def sort_fldr_img(folder_name,trip):
+    files = os.listdir(folder_name) #Getting the files
     print(files)
-    type(files)
+    print(len(files))
+
+    for i in range(len(files)):
+        files[i] = folder_name+files[i] #adding absolute path
+        # print(i)
+    # files.sort(key=lambda x: os.path.getmtime(x))
+    paths = sorted(Path(folder_name).iterdir(), key=os.path.getctime) #sorting the files
+
+    print(paths)
 
 
+
+sort_fldr_img('C:\Vedant_\Projects\Sorting_System\Images','Test',)
