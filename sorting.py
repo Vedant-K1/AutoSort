@@ -6,9 +6,15 @@
 #TODO Quick GUI for putting unsorted images into a folder/subfolder
 #TODO Dockerize?
 #TODO Combine with android app??
+import glob
+import os
 
 
 def sort_fldr_img(folder_name,trip,default='Unsorted'):
-    a=15
-    print(a)
+    files = list(filter(os.path.isfile, glob.glob(folder_name + "*")))
+    files.sort(key=lambda x: os.path.getmtime(x))
+    print(files)
+    type(files)
 
+
+def
