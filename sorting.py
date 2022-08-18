@@ -17,4 +17,3 @@ def sort_fldr_img(folder_name,trip,default='Unsorted'):
     type(files)
 
 
-def
