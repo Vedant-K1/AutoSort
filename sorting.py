@@ -37,8 +37,10 @@ def make_dir(folder_name,paths,trip):
     except:
         print("Error in making Directory:",direc)
 
-
-
+    #MAKING SUB-DIRECTORIES
+    days=5
+    d={}
+    day_path=os.path.join(direc,)
 
 #-----------------------MAIN--------------------------------
 
