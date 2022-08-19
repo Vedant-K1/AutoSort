@@ -24,16 +24,22 @@ def sort_img(folder_name,trip):
     files.sort(key=os.path.getctime)
     print(paths)
     # return(paths)
-    make_dir(paths,trip)
+    make_dir(folder_name,paths,trip)
 
 
-def make_dir(paths,trip):
+def make_dir(folder_name,paths,trip):
+    target_dir='C:\Vedant_\Projects\Sorting_System\Target'
+    direc=os.path.join(target_dir,trip)#Making the absolute path of the main directory of trip
+    mode = 0o666
+    try:
+        os.mkdir(direc,mode)#Directory made
+        print("Made directory:",direc)
+    except:
+        print("Error in making Directory:",direc)
 
 
 
 
-
-
-
+#-----------------------MAIN--------------------------------
 
 sorted_path=sort_img('C:\Vedant_\Projects\Sorting_System\Images','Test',)
