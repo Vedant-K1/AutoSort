@@ -23,7 +23,16 @@ def sort_img(folder_name,trip):
     paths = sorted(Path(folder_name).iterdir(), key=os.path.getmtime) #sorting the files
     files.sort(key=os.path.getctime)
     print(paths)
-    return(paths)
+    # return(paths)
+    make_dir(paths,trip)
+
+
+def make_dir(paths,trip):
+
+
+
+
+
 
 
 
