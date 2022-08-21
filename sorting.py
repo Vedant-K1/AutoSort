@@ -40,7 +40,7 @@ def make_dir(folder_name,paths,trip):
     #MAKING SUB-DIRECTORIES
     days=5
     d={}
-    day_path=os.path.join(direc,)
+    day_path=os.path.join(direc)
 
 #-----------------------MAIN--------------------------------
 
