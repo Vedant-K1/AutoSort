@@ -45,3 +45,4 @@ def make_dir(folder_name,paths,trip):
 #-----------------------MAIN--------------------------------
 
 sorted_path=sort_img('C:\Vedant_\Projects\Sorting_System\Images','Test',)
+#bruh
