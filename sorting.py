@@ -9,9 +9,10 @@
 import glob
 import os
 from pathlib import Path
+from PIL import Image
 
 
-def sort_img(folder_name,trip):
+def image_path(folder_name,trip):
     files = os.listdir(folder_name) #Getting the files
     print(files)
     print(len(files))
@@ -21,11 +22,31 @@ def sort_img(folder_name,trip):
         # print(i)
         # files.sort(key=lambda x: os.path.getmtime(x))
     paths = sorted(Path(folder_name).iterdir(), key=os.path.getmtime) #sorting the files
-    files.sort(key=os.path.getctime)
+    files.sort(key=os.path.getmtime)
     print(paths)
     # return(paths)
+    sort_img(files)
     make_dir(folder_name,paths,trip)
 
+
+def sort_img(files):
+    p=len(files)
+    Mdate=[]
+    cnt=0
+    for i in files:
+        print('i:',i,' ',cnt)
+        try:
+            Mdate.append(get_date_taken(i))
+            print('Date created: ', Mdate[cnt], '\n')
+        except:
+            print('ERROR IN DATE TAKEN IN:',i,'\n')
+
+        cnt+=1
+    print(Mdate)
+
+
+def get_date_taken(path):
+    return Image.open(path)._getexif()[36867]
 
 def make_dir(folder_name,paths,trip):
     target_dir='C:\Vedant_\Projects\Sorting_System\Target'
@@ -45,8 +66,10 @@ def make_dir(folder_name,paths,trip):
 #-----------------------MAIN--------------------------------
 
 print('Starting Auto Sort')
-sorted_path=sort_img('C:\Vedant_\Projects\Sorting_System\Images','Test',)
+sorted_path=image_path('C:\Vedant_\Projects\Sorting_System\Images','Test',)
 #bruh
+
+
 '''
 Base Directory is 'C:\Vedant_\Projects\Sorting_System\Images' also known as the dump directory.
 Pics - unsorted,random,etc
