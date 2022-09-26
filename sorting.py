@@ -19,7 +19,7 @@ def sort_img(folder_name,trip):
     for i in range(len(files)):
         files[i] = folder_name+'\\\\'+files[i] #adding absolute path
         # print(i)
-    # files.sort(key=lambda x: os.path.getmtime(x))
+        # files.sort(key=lambda x: os.path.getmtime(x))
     paths = sorted(Path(folder_name).iterdir(), key=os.path.getmtime) #sorting the files
     files.sort(key=os.path.getctime)
     print(paths)
@@ -44,5 +44,14 @@ def make_dir(folder_name,paths,trip):
 
 #-----------------------MAIN--------------------------------
 
+print('Starting Auto Sort')
 sorted_path=sort_img('C:\Vedant_\Projects\Sorting_System\Images','Test',)
 #bruh
+'''
+Base Directory is 'C:\Vedant_\Projects\Sorting_System\Images' also known as the dump directory.
+Pics - unsorted,random,etc
+
+Test: Trip name
+Target directory: C:\Vedant_\Projects\Sorting_System\Target
+
+'''
