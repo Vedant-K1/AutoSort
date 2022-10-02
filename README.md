@@ -1,10 +1,14 @@
 # AutoSort
 create a function to sort images and videos which are uploaded:
 
- based on creation date
- create a separate folder for each trip
- One day, one subfolder in trip's folder
- Default: Unsorted folder
- Quick GUI for putting unsorted images into a folder/subfolder
+ 1) based on the 'Date taken' 
+ 2) create a separate folder for each trip
+    -- one way to do this is by checking if the diffrence between 2 pictures is more than 2 or 3 days
+ 3) One day, one subfolder in trip's folder
+ 4) Default: Unsorted folder
+ 5) Quick GUI for putting unsorted images into a folder/subfolder
+    -- Darg and drop?
+ 
+ 
  Dockerize?
  Combine with android app??
