@@ -1,4 +1,6 @@
 # AutoSort
+
+Before compiling, be sure to change the paths
 create a Program to sort images and videos which are uploaded:
 
  1) based on the 'Date taken' 
