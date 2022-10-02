@@ -1,5 +1,5 @@
 # AutoSort
-create a function to sort images and videos which are uploaded:
+create a Program to sort images and videos which are uploaded:
 
  1) based on the 'Date taken' 
  2) create a separate folder for each trip
