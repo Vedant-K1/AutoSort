@@ -10,7 +10,13 @@ import glob
 import os
 from pathlib import Path
 from PIL import Image
+import argparse
 
+parser = argparse.ArgumentParser()
+parser.add_argument("path",help = "Enter the Images folder path")
+args = parser.parse_args()
+
+folderPath = args.path
 
 def image_path(folder_name,trip):
     files = os.listdir(folder_name) #Getting the files
@@ -66,7 +72,7 @@ def make_dir(folder_name,paths,trip):
 #-----------------------MAIN--------------------------------
 
 print('Starting Auto Sort')
-sorted_path=image_path('C:\Vedant_\Projects\Sorting_System\Images','Test',)
+sorted_path=image_path(folderPath,'Test',)
 #bruh
 
 
