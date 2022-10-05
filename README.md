@@ -30,7 +30,7 @@ $ python sorting.py
  3) One day, one subfolder in trip's folder
  4) Default: Unsorted folder
  5) Quick GUI for putting unsorted images into a folder/subfolder
-    -- Darg and drop?
+    -- Drag and drop?
  
  
  Dockerize?
